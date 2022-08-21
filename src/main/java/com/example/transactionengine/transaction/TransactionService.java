@@ -1,7 +1,7 @@
 package com.example.transactionengine.transaction;
 
-import com.example.transactionengine.transaction.currency.CurrencyEntity;
 import com.example.transactionengine.transaction.currency.CurrencyRepository;
+import com.example.transactionengine.transaction.exception.SameSourceDestinationAccountException;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
@@ -26,6 +26,12 @@ public class TransactionService {
       BigDecimal totalCreditedToDestination,
       String sourceCurrency,
       String destinationCurrency) {
+    /*
+    Check source and destination account
+     */
+    if (sourceAccount.equalsIgnoreCase(destinationAccount)) {
+      throw new SameSourceDestinationAccountException(sourceAccount, destinationAccount);
+    }
     /*
     Create the transaction entity object
      */
