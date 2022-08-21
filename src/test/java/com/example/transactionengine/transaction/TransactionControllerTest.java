@@ -150,4 +150,42 @@ public class TransactionControllerTest {
   }
 
 
+  @Test
+  @DisplayName("Test Same destination source account for execute request")
+  @Description("Test Same destination source account for execute request"
+      + "Acceptance Criteria = 422 Bad Request")
+  public void testSameSourceDestinationAccountForExecute() throws Exception {
+
+    /*
+    Fill the execute request.
+     */
+    ExecuteRequest executeRequest = new ExecuteRequest();
+    executeRequest.setCustomerId(1);
+    executeRequest.setDestinationAccount("1338508001840");
+    executeRequest.setDestinationCurrency("USD");
+    executeRequest.setSourceAccount("1338508001840");
+    executeRequest.setSourceCurrency("USD");
+    executeRequest.setTotalDebitedFromSource(new BigDecimal(10));
+    executeRequest.setTotalCreditedToDestination(new BigDecimal(10));
+    executeRequest.setAmount(new BigDecimal(10));
+
+    long executionTime = System.currentTimeMillis();
+
+    MvcResult executeResponse = mvc.perform(post("/transaction")
+        .contentType(MediaType.APPLICATION_JSON)
+        .content(executeRequest.toJson()))
+        .andExpect(status().isUnprocessableEntity())
+        .andReturn();
+
+    executionTime = System.currentTimeMillis() - executionTime;
+
+    /*
+    Extract response content & Assure != null
+     */
+    String executeContent = executeResponse.getResponse().getContentAsString();
+    JsonElement executeOutput = JsonParser.parseString(executeContent);
+
+    Allure.addAttachment("Execute Transaction Response:", gson.toJson(executeOutput));
+    Allure.addAttachment("Execution Time in ms", String.valueOf(executionTime));
+  }
 }
