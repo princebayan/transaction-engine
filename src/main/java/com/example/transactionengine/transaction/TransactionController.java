@@ -7,6 +7,7 @@ import com.example.transactionengine.transaction.response.TransactionsResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import java.util.List;
 import java.util.stream.Collectors;
+import javax.validation.Valid;
 import javax.validation.constraints.Positive;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -35,7 +36,7 @@ public class TransactionController {
 
   @PostMapping
   public ResponseEntity<ExecuteResponse> execute(
-      @RequestBody ExecuteRequest executeRequest) {
+      @RequestBody @Valid ExecuteRequest executeRequest) {
     log.info("Invoke execute. request {}", executeRequest);
 
     int transactionId = transactionService.executeTransaction(
