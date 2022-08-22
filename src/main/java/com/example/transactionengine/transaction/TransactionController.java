@@ -60,7 +60,7 @@ public class TransactionController {
 
 
   @GetMapping
-  public ResponseEntity getTransaction(
+  public ResponseEntity<TransactionsResponse> getTransaction(
       @RequestParam @Positive int customerId) {
 
     List<TransactionEntity> transactionEntities = transactionService.getTransactions(customerId);

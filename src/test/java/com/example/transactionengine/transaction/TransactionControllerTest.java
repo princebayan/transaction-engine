@@ -26,7 +26,6 @@ import org.springframework.test.web.servlet.MvcResult;
 @DisplayName("Transaction Controller Test")
 public class TransactionControllerTest {
 
-  private static final ObjectMapper mapper = new ObjectMapper();
   private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
   @Autowired

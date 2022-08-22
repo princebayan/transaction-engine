@@ -39,7 +39,7 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build
 
-      - name: Build and Run Tests
+      - name: Run Tests
         run:  ./gradlew test -i
       - name: Publish Test Report
         uses: mikepenz/action-junit-report@v3

@@ -55,7 +55,9 @@ public class TransactionService {
   }
 
   public List<TransactionEntity> getTransactions(int customerId) {
-
+    /*
+    Get the transactions from the database for the desired customer.
+     */
     List<TransactionEntity> transactions = transactionRepository.findByCustomerId(customerId);
     return transactions;
   }
