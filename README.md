@@ -24,10 +24,12 @@ There are several ways to run a Spring Boot application on your local machine. O
 <h3>It is preferred to run the application with a spring profile property:</h3> 
 
 <h4>JVM System Parameter</h4>
+
 ```shell
 -Dspring.profiles.active=dev
 ```
 <h4>Environment Variable</h4>
+
 ```shell
 export spring_profiles_active=dev
 ```
@@ -35,11 +37,13 @@ export spring_profiles_active=dev
 once the application is up you can access the swagger documentation page from the 
 below URL:
 <br>
+
 [Localhost Swagger](http://localhost:8082/swagger-ui.html)
 <br>
 <br>
 Also, you can check the swagger documentation from the Cloud Server instance
 <br>
+
 [Cloud Swagger](http://137.184.12.5:8081/swagger-ui.html)
 
 
