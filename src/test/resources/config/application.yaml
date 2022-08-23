@@ -1,0 +1,28 @@
+# MyBatis Mapper location
+spring:
+  application:
+    name: transaction-engine
+  datasource:
+    url: jdbc:h2:mem:transaction-engine;DB_CLOSE_DELAY=-1
+    username: sa
+    password: password
+    driver-class-name: org.h2.Driver
+  jpa:
+    show-sql: true
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update
+
+  sql:
+    init:
+      mode: always
+server:
+  port: 8082
+# Management Configuration
+management:
+  server:
+    port: 9082
+  endpoints:
+    web:
+      exposure:
+        include: "*"

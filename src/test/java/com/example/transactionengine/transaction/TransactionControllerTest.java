@@ -1,10 +1,12 @@
 package com.example.transactionengine.transaction;
 
+import static com.github.automatedowl.tools.AllureEnvironmentWriter.allureEnvironmentWriter;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import com.example.transactionengine.transaction.request.ExecuteRequest;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.common.collect.ImmutableMap;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
@@ -30,6 +32,17 @@ public class TransactionControllerTest {
 
   @Autowired
   private MockMvc mvc;
+
+  @Test
+  void initialize() {
+    /*
+    Set Allure Environment
+     */
+    allureEnvironmentWriter(
+        ImmutableMap.<String, String>builder()
+            .build(), "build/allure-results/");
+
+  }
 
   @Test
   @DisplayName("Test success execution of a transaction")
