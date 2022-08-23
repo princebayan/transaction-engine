@@ -1,7 +1,9 @@
 # Transaction-Engine
 
-[![Build Status](https://github.com/princebayan/transaction-engine/actions/workflows/transaction-engine-pipeline.yaml/badge.svg)](https://github.com/princebayan/transaction-engine)
+[![Build Status](https://github.com/princebayan/transaction-engine/actions/workflows/transaction-engine-pipeline.yaml/badge.svg)](https://github.com/princebayan/transaction-engine/actions)
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
+[![SpringBoot](https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot)](http://projects.spring.io/spring-boot/)
 
 Transaction engine is a spring boot java application that expose APIs to execute a transaction based on different criteria 
 such as the source account, destination account , amount ... etc. 
@@ -46,6 +48,76 @@ Also, you can check the swagger documentation from the Cloud Server instance
 
 [Cloud Swagger](http://137.184.12.5:8081/swagger-ui.html)
 
+## Testing the application
+
+Below is a sample request and response to test the available APIs
+
+- ### Add Transaction
+    Method : POST
+
+    URI: <b>/transaction</b>
+
+    Request:
+
+    ```json
+    {
+      "customerId": 1,
+      "sourceAccount": "1338508001840",
+      "destinationAccount": "1234567001840",
+      "amount": 10,
+      "totalDebitedFromSource": 11,
+      "totalCreditedToDestination": 10,
+      "sourceCurrency": "USD",
+      "destinationCurrency": "USD"
+    }
+    ```
+    Expected Success Response: 
+    
+    ```json
+    {
+      "transactionId": 1
+    }
+    ```
+
+- ### Get Transaction
+    Method : GET
+
+    URI: <b>/transaction?customerId=1</b>
+
+    Expected Success Response:
+
+    ```json
+    {
+      "transactions": [
+        {
+          "id": 1,
+          "customerId": 1,
+          "sourceAccount": "1234",
+          "destinationAccount": "5678",
+          "createdDate": "2022-08-20T10:02:43.134+00:00",
+          "updatedDate": "2022-08-20T10:02:43.134+00:00",
+          "amount": 10,
+          "totalDebitedFromSource": 11,
+          "totalCreditedToDestination": 10,
+          "sourceCurrency": "USD",
+          "destinationCurrency": "USD"
+        },
+        {
+          "id": 2,
+          "customerId": 1,
+          "sourceAccount": "1234567001840",
+          "destinationAccount": "1338508275840",
+          "createdDate": "2022-08-21T10:30:36.645+00:00",
+          "updatedDate": "2022-08-21T10:30:36.645+00:00",
+          "amount": 1000,
+          "totalDebitedFromSource": 1000,
+          "totalCreditedToDestination": 1000,
+          "sourceCurrency": "USD",
+          "destinationCurrency": "USD"
+        }
+      ]
+    }
+    ```
 
 ## Technologies Used
 
