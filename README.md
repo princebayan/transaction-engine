@@ -1,9 +1,9 @@
 # Transaction-Engine
+[![SpringBoot](https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot)](http://projects.spring.io/spring-boot/)
 
 [![Build Status](https://github.com/princebayan/transaction-engine/actions/workflows/transaction-engine-pipeline.yaml/badge.svg)](https://github.com/princebayan/transaction-engine/actions)
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
-[![SpringBoot](https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot)](http://projects.spring.io/spring-boot/)
 
 Transaction engine is a spring boot java application that expose APIs to execute a transaction based on different criteria 
 such as the source account, destination account , amount ... etc. 
@@ -46,7 +46,7 @@ below URL:
 Also, you can check the swagger documentation from the Cloud Server instance
 <br>
 
-[Cloud Swagger](http://137.184.12.5:8081/swagger-ui.html)
+[Cloud Swagger](http://137.184.12.5:8082/swagger-ui.html)
 
 ## Testing the application
 
@@ -118,6 +118,14 @@ Below is a sample request and response to test the available APIs
       ]
     }
     ```
+
+## Allure Report
+This project use allure to visualize the Junit results, you can check the result
+from the Github Action Pipeline by navigating to the stage `Post the link to the report` 
+or directly from Github pages feature through the below link:
+
+[Github Pages](https://princebayan.github.io/transaction-engine/)
+
 
 ## Technologies Used
 
