@@ -6,7 +6,7 @@
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 [![Maintenance](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com)
 
-Transaction engine is a spring boot java application that expose APIs to execute a transaction based on different criteria 
+Transaction engine is a spring boot java application that exposes APIs to execute a transaction based on different criteria 
 such as the source account, destination account , amount ... etc. 
 
 
