@@ -53,8 +53,9 @@ Also, you can check the swagger documentation from the Cloud Server instance
 - [Spring Boot H2 Database](https://www.baeldung.com/spring-boot-h2-database)
 - [Project Lombok](https://projectlombok.org/)
 - [Allure Report](https://qameta.io/allure-report/)
+- [Rest Exception Handling](https://www.baeldung.com/exception-handling-for-rest-with-spring)
 
 
 ## Copyright
 
-Released under the Apache License 2.0. See the [LICENSE](https://github.com/codecentric/springboot-sample-app/blob/master/LICENSE) file.
+Released under the Apache License 2.0. See the [LICENSE](https://github.com/princebayan/transaction-engine/blob/develop/LICENSE.txt) file.
