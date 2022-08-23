@@ -1,1 +1,0 @@
-{"total":2,"items":[{"uid":"e69dc671131dd381e3bfca6b2fbc1e6b","name":"Transaction Controller Test","statistic":{"failed":1,"broken":0,"skipped":0,"passed":3,"unknown":0,"total":4}},{"uid":"20ef4b7627d9a3f6ac1c0a170df34926","name":"com.example.transactionengine.TransactionEngineApplicationTests","statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1}}]}
