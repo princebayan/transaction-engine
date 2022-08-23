@@ -4,6 +4,7 @@
 [![Build Status](https://github.com/princebayan/transaction-engine/actions/workflows/transaction-engine-pipeline.yaml/badge.svg)](https://github.com/princebayan/transaction-engine/actions)
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
+[![Maintenance](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com)
 
 Transaction engine is a spring boot java application that expose APIs to execute a transaction based on different criteria 
 such as the source account, destination account , amount ... etc. 
@@ -130,6 +131,7 @@ or directly from Github pages feature through the below link:
 ## Technologies Used
 
 - [Spring Boot Framework](http://projects.spring.io/spring-boot/)
+- [Docker](https://www.docker.com)
 - [Spring Boot H2 Database](https://www.baeldung.com/spring-boot-h2-database)
 - [Project Lombok](https://projectlombok.org/)
 - [Allure Report](https://qameta.io/allure-report/)
